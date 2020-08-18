@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "build": "rm -rf ./dist && build-storybook -o ./dist",
     "storybook": "start-storybook -p 9009",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
