@@ -1,7 +1,19 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 9009",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@storybook/react": "^6.0.12",
+    "jest": "^26.4.0",
+    "lerna": "^3.22.1",
+    "prettier": "^2.0.5",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
