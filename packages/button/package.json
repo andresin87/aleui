@@ -31,11 +31,16 @@
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
+    "@storybook/preset-scss": "^1.0.2",
     "@storybook/react": "^6.0.12",
+    "css-loader": "^4.2.1",
     "jest": "^26.4.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1"
   },
   "dependencies": {
+    "@s-ui/react-atom-button": "^1.50.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

@@ -1,0 +1,9 @@
+// Settings
+//
+
+// Inherit from original theme
+@import '~@s-ui/theme/lib/index.scss';
+@import '~@adv-ui/adv-theme/lib/index.scss';
+
+// Load font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:#{$fw-light},#{$fw-regular},#{$fw-regular}i,#{$fw-semi-bold},#{$fw-bold},#{$fw-bold}i');

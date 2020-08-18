@@ -1,0 +1,9 @@
+// Settings
+//
+
+// Inherit from original theme
+@import '~@s-ui/theme/lib/index';
+@import '~@adv-ui/fc-theme/lib/index';
+
+// Load font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:#{$fw-light},#{$fw-regular},#{$fw-regular}i,#{$fw-semi-bold},#{$fw-bold},#{$fw-bold}i');
