@@ -24,8 +24,8 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         vercel-token: ${{ secrets.VERCEL_KEY }} # Required
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # Required
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  # Required
         working-directory: dist
     - uses: amondnet/vercel-action@v19.0.1+3   
       id: now-deployment-production
@@ -33,7 +33,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         vercel-token: ${{ secrets.VERCEL_KEY }} # Required
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # Required
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  # Required
         vercel-args: '--prod'
         working-directory: dist
