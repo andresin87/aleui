@@ -1,0 +1,44 @@
+{
+  "name": "@aleui/button",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "“andresin87” <“andres.lucas@adevinta.com”>",
+  "homepage": "https://github.com/andresin87/aleui#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "context": "__context__",
+    "stories": "__stories__",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresin87/aleui.git"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9009",
+    "build-lib": "npx babel src --out-dir lib",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/andresin87/aleui/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@storybook/react": "^6.0.12",
+    "babel-loader": "^8.1.0",
+    "jest": "^26.4.0",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
