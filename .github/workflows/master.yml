@@ -1,0 +1,39 @@
+name: "Chromatic"
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  Chromatic-UI:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: |
+        yarn && yarn build
+    - uses: chromaui/action@v1
+      with:
+        buildScriptName: build
+        projectToken: ${{ secrets.CHROMATIC_KEY }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: amondnet/vercel-action@v19.0.1+3    
+      id: now-deployment-staging
+      if: github.event_name == 'pull_request'
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        vercel-token: ${{ secrets.VERCEL_KEY }} # Required
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID_AUTH }}
+        working-directory: example/express-basic-auth
+    - uses: amondnet/vercel-action@v19.0.1+3   
+      id: now-deployment-production
+      if: github.event_name == 'push'
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        vercel-token: ${{ secrets.VERCEL_KEY }} # Required
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID_AUTH }}
+        vercel-args: '--prod'
+        working-directory: example/express-basic-auth
