@@ -16,6 +16,5 @@ jobs:
     - uses: chromaui/action@v1
       with:
         buildScriptName: build
-        storybookBuildDir: dist
         projectToken: ${{ secrets.CHROMATIC_KEY }}
         token: ${{ secrets.GITHUB_TOKEN }}
