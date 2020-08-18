@@ -1,0 +1,9 @@
+{
+  "name": "aleui",
+  "version": 2,
+  "scope": "andresin87",
+  "public": true,
+  "github": {
+    "enabled": false
+  }
+}
